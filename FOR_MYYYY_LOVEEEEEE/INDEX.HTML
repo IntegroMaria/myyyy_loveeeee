@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, My Love ❤️</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Great+Vibes&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-cream: #FAF6F0;
+            --soft-blush: #F9E8E8;
+            --rose-pink: #E8A0BF;
+            --deep-rose: #C05C7E;
+            --burgundy: #682B33;
+            --gold: #D4AF37;
+            --rose-gold: #B76E79;
+            --text-dark: #3A2E2B;
+            --text-muted: #7A6965;
+            --white: #FFFFFF;
+            --shadow-soft: 0 10px 30px rgba(183, 110, 121, 0.12);
+            --shadow-hover: 0 18px 40px rgba(104, 43, 51, 0.18);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-cream);
+            color: var(--text-dark);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--bg-cream);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--rose-pink);
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--rose-gold);
+        }
+
+        /* Typography Helper Classes */
+        h1, h2, h3, .serif-font {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .script-font {
+            font-family: 'Great Vibes', cursive;
+        }
+
+        .cursive-handwriting {
+            font-family: 'Alex Brush', cursive;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Section Headings */
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .section-header .subtitle {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.2rem;
+            color: var(--rose-gold);
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .section-header h2 {
+            font-size: 2.8rem;
+            color: var(--burgundy);
+            letter-spacing: 1px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '🌸';
+            display: block;
+            font-size: 1.2rem;
+            margin-top: 10px;
+            opacity: 0.8;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(250, 246, 240, 0.92);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(232, 160, 191, 0.25);
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .nav-logo {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.2rem;
+            color: var(--burgundy);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-size: 0.95rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--deep-rose);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--rose-gold);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Pure CSS Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+        }
+
+        .menu-btn {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .menu-btn span {
+            width: 25px;
+            height: 2px;
+            background-color: var(--burgundy);
+            transition: all 0.3s ease;
+        }
+
+        .hero {
+            height: 100vh;
+            min-height: 650px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            background: linear-gradient(135deg, #FAF6F0 0%, #F9E8E8 50%, #F5D3DE 100%);
+            padding-top: 80px;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            z-index: 2;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 8px 24px;
+            background: rgba(255, 255, 255, 0.7);
+            border: 1px solid var(--rose-pink);
+            border-radius: 50px;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--burgundy);
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            animation: fadeInDown 1s ease;
+        }
+
+        .hero h1 {
+            font-size: 4.2rem;
+            color: var(--burgundy);
+            line-height: 1.15;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.04);
+            animation: fadeInUp 1.2s ease;
+        }
+
+        .hero h1 span {
+            display: block;
+            font-family: 'Great Vibes', cursive;
+            color: var(--deep-rose);
+            font-size: 5rem;
+            font-weight: normal;
+            margin-top: 5px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 35px;
+            font-weight: 300;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeInUp 1.4s ease;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(135deg, var(--rose-gold), var(--deep-rose));
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            box-shadow: 0 8px 25px rgba(192, 92, 126, 0.35);
+            transition: all 0.3s ease;
+            animation: fadeInUp 1.6s ease;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(192, 92, 126, 0.45);
+            background: linear-gradient(135deg, var(--deep-rose), var(--burgundy));
+        }
+
+        /* Floating Background Elements */
+        .floating-heart {
+            position: absolute;
+            color: rgba(232, 160, 191, 0.4);
+            user-select: none;
+            pointer-events: none;
+            animation: float 8s infinite ease-in-out;
+        }
+
+        .fh-1 { top: 15%; left: 10%; font-size: 2rem; animation-delay: 0s; }
+        .fh-2 { top: 25%; right: 12%; font-size: 3.5rem; animation-delay: 1.5s; color: rgba(192, 92, 126, 0.25); }
+        .fh-3 { bottom: 20%; left: 15%; font-size: 2.5rem; animation-delay: 3s; }
+        .fh-4 { bottom: 25%; right: 18%; font-size: 1.8rem; animation-delay: 4.5s; }
+        .fh-5 { top: 60%; left: 5%; font-size: 3rem; animation-delay: 2s; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-25px) rotate(12deg); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .timeline-section {
+            padding: 100px 0;
+            background-color: var(--white);
+            position: relative;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--soft-blush), var(--rose-gold), var(--soft-blush));
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -1px;
+        }
+
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+
+        .timeline-item::after {
+            content: '❤';
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            right: -15px;
+            background-color: var(--white);
+            border: 2px solid var(--rose-gold);
+            top: 20px;
+            border-radius: 50%;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            color: var(--deep-rose);
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+        }
+
+        .left {
+            left: 0;
+            text-align: right;
+        }
+
+        .right {
+            left: 50%;
+            text-align: left;
+        }
+
+        .right::after {
+            left: -15px;
+        }
+
+        .timeline-content {
+            padding: 25px 30px;
+            background: var(--bg-cream);
+            position: relative;
+            border-radius: 15px;
+            box-shadow: var(--shadow-soft);
+            border: 1px solid rgba(232, 160, 191, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .timeline-date {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--rose-gold);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .timeline-content h3 {
+            font-size: 1.4rem;
+            color: var(--burgundy);
+            margin-bottom: 10px;
+        }
+
+        .timeline-content p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .letter-section {
+            padding: 100px 0;
+            background: linear-gradient(180deg, var(--white) 0%, var(--soft-blush) 100%);
+            position: relative;
+        }
+
+        .paper-card {
+            background-color: #FFFDF9;
+            background-image: radial-gradient(#E8A0BF 0.5px, transparent 0.5px);
+            background-size: 24px 24px;
+            max-width: 750px;
+            margin: 0 auto;
+            padding: 60px 50px;
+            border-radius: 4px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.06), 0 0 0 12px rgba(255, 255, 255, 0.7);
+            border: 1px solid #EFE4D8;
+            position: relative;
+        }
+
+        .paper-card::before {
+            content: '';
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            right: 15px;
+            bottom: 15px;
+            border: 1px dashed var(--rose-pink);
+            pointer-events: none;
+            opacity: 0.6;
+        }
+
+        .letter-header {
+            text-align: right;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
+        .letter-body {
+            font-size: 1.1rem;
+            color: #332825;
+            line-height: 1.9;
+        }
+
+        .letter-body p {
+            margin-bottom: 20px;
+        }
+
+        .letter-body p:first-letter {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            float: left;
+            line-height: 0.8;
+            padding-right: 12px;
+            padding-top: 4px;
+            color: var(--burgundy);
+            font-weight: bold;
+        }
+
+        .letter-signature {
+            margin-top: 40px;
+            text-align: right;
+            font-family: 'Alex Brush', cursive;
+            font-size: 2.8rem;
+            color: var(--burgundy);
+        }
+
+        .reasons-section {
+            padding: 100px 0;
+            background-color: var(--bg-cream);
+        }
+
+        .reasons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .reason-card {
+            background: var(--white);
+            padding: 35px 25px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: var(--shadow-soft);
+            border: 1px solid rgba(232, 160, 191, 0.15);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .reason-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--rose-pink), var(--rose-gold));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .reason-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .reason-card:hover::before {
+            opacity: 1;
+        }
+
+        .reason-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--soft-blush);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 1.5rem;
+            color: var(--deep-rose);
+            transition: transform 0.3s ease;
+        }
+
+        .reason-card:hover .reason-icon {
+            transform: scale(1.1) rotate(10deg);
+            background: var(--rose-pink);
+            color: var(--white);
+        }
+
+        .reason-card h3 {
+            font-size: 1.25rem;
+            color: var(--burgundy);
+            margin-bottom: 12px;
+        }
+
+        .reason-card p {
+            font-size: 0.92rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .gallery-section {
+            padding: 100px 0;
+            background: var(--white);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 35px;
+            padding: 10px;
+        }
+
+        .polaroid {
+            background: var(--white);
+            padding: 15px 15px 25px 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            border: 1px solid #EFEFEF;
+            border-radius: 4px;
+            transition: all 0.4s ease;
+            text-align: center;
+            position: relative;
+        }
+
+        .polaroid:nth-child(odd) {
+            transform: rotate(-3deg);
+        }
+
+        .polaroid:nth-child(even) {
+            transform: rotate(3deg);
+        }
+
+        .polaroid:nth-child(3n) {
+            transform: rotate(1.5deg);
+        }
+
+        .polaroid:hover {
+            transform: scale(1.05) rotate(0deg) !important;
+            box-shadow: 0 20px 35px rgba(104, 43, 51, 0.15);
+            z-index: 10;
+        }
+
+        .polaroid-img-wrapper {
+            width: 100%;
+            height: 240px;
+            overflow: hidden;
+            border-radius: 2px;
+            background-color: var(--soft-blush);
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        /* SVG Memory Placeholders for Photo Cards */
+        .polaroid-img-wrapper svg {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .polaroid-caption {
+            font-family: 'Great Vibes', cursive;
+            font-size: 1.6rem;
+            color: var(--burgundy);
+        }
+
+        .gift-section {
+            padding: 110px 0;
+            background: linear-gradient(135deg, var(--soft-blush) 0%, #F5D3DE 100%);
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .gift-box-wrapper {
+            margin: 40px auto 0;
+            max-width: 500px;
+            position: relative;
+        }
+
+        /* Hide standard checkbox */
+        #gift-toggle {
+            display: none;
+        }
+
+        /* Label acts as the clickable trigger */
+        .gift-container {
+            cursor: pointer;
+            display: inline-block;
+            perspective: 1000px;
+        }
+
+        .gift-box {
+            width: 180px;
+            height: 180px;
+            background: linear-gradient(135deg, var(--deep-rose), var(--burgundy));
+            margin: 0 auto;
+            position: relative;
+            border-radius: 12px;
+            box-shadow: 0 15px 35px rgba(104, 43, 51, 0.3);
+            transition: transform 0.5s ease;
+        }
+
+        /* Ribbon Vertical & Horizontal */
+        .gift-box::before {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 100%;
+            background: var(--gold);
+            left: 50%;
+            transform: translateX(-50%);
+            top: 0;
+            z-index: 2;
+        }
+
+        .gift-box::after {
+            content: '';
+            position: absolute;
+            height: 30px;
+            width: 100%;
+            background: var(--gold);
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            z-index: 2;
+        }
+
+        /* Gift Lid */
+        .gift-lid {
+            position: absolute;
+            width: 200px;
+            height: 45px;
+            background: linear-gradient(135deg, #d66d8e, var(--deep-rose));
+            top: -20px;
+            left: -10px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+            z-index: 4;
+            transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            transform-origin: top left;
+        }
+
+        .gift-lid::before {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 100%;
+            background: var(--gold);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Bow on Lid */
+        .gift-bow {
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 30px;
+            z-index: 5;
+            transition: all 0.4s ease;
+        }
+
+        .gift-bow::before, .gift-bow::after {
+            content: '';
+            position: absolute;
+            width: 28px;
+            height: 28px;
+            border: 4px solid var(--gold);
+            border-radius: 50% 50% 0 50%;
+            transform: rotate(45deg);
+        }
+
+        .gift-bow::after {
+            border-radius: 50% 50% 50% 0;
+            transform: rotate(-45deg);
+            right: 0;
+        }
+
+        .click-hint {
+            margin-top: 30px;
+            font-size: 1rem;
+            color: var(--burgundy);
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.6; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.03); }
+        }
+
+        /* Surprise Revealed Message Card */
+        .surprise-card {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            background: var(--white);
+            border-radius: 20px;
+            padding: 0 30px;
+            margin-top: 30px;
+            box-shadow: var(--shadow-hover);
+            transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transform: scale(0.8);
+            border: 2px solid var(--rose-pink);
+        }
+
+        /* CSS State Triggers when Gift Checkbox is Toggled */
+        #gift-toggle:checked ~ .gift-container .gift-lid {
+            transform: rotate(-110deg) translateY(-30px);
+            opacity: 0;
+        }
+
+        #gift-toggle:checked ~ .gift-container .gift-box {
+            transform: scale(0.9);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        #gift-toggle:checked ~ .gift-container .click-hint {
+            display: none;
+        }
+
+        #gift-toggle:checked ~ .surprise-card {
+            max-height: 600px;
+            opacity: 1;
+            padding: 40px 30px;
+            transform: scale(1);
+        }
+
+        .surprise-card h3 {
+            font-size: 2rem;
+            color: var(--burgundy);
+            margin-bottom: 15px;
+        }
+
+        .surprise-card p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            margin-bottom: 25px;
+        }
+
+        .coupon-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .coupon {
+            border: 2px dashed var(--rose-gold);
+            background: var(--bg-cream);
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            color: var(--burgundy);
+            font-weight: 600;
+        }
+
+        .coupon span {
+            display: block;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            font-weight: normal;
+            margin-top: 4px;
+        }
+
+        footer {
+            background-color: var(--burgundy);
+            color: var(--soft-blush);
+            text-align: center;
+            padding: 50px 20px;
+            font-size: 0.95rem;
+        }
+
+        footer p {
+            opacity: 0.9;
+        }
+
+        .footer-heart {
+            color: var(--rose-pink);
+            display: inline-block;
+            margin: 0 4px;
+            animation: heartBeat 1.3s infinite;
+        }
+
+        @keyframes heartBeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.25); }
+        }
+
+        @media (max-width: 768px) {
+            .menu-btn {
+                display: flex;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--bg-cream);
+                flex-direction: column;
+                align-items: center;
+                padding: 25px 0;
+                gap: 20px;
+                border-bottom: 1px solid rgba(232, 160, 191, 0.3);
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.4s ease-out;
+            }
+
+            .menu-toggle:checked ~ .nav-links {
+                max-height: 350px;
+            }
+
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .hero h1 span {
+                font-size: 3.8rem;
+            }
+
+            .timeline::after {
+                left: 31px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 15px;
+            }
+
+            .timeline-item.right {
+                left: 0%;
+            }
+
+            .left {
+                text-align: left;
+            }
+
+            .left::after, .right::after {
+                left: 16px;
+            }
+
+            .paper-card {
+                padding: 40px 25px;
+            }
+
+            .section-header h2 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="nav-logo">My Heart</a>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#letter">Love Letter</a></li>
+                <li><a href="#reasons">Why I Love You</a></li>
+                <li><a href="#gallery">Memories</a></li>
+                <li><a href="#gift">Birthday Gift</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="hero" class="hero">
+        <!-- Floating CSS decorative hearts -->
+        <div class="floating-heart fh-1">❤</div>
+        <div class="floating-heart fh-2">💖</div>
+        <div class="floating-heart fh-3">✨</div>
+        <div class="floating-heart fh-4">🌸</div>
+        <div class="floating-heart fh-5">💕</div>
+
+        <div class="hero-content">
+            <span class="hero-badge">Today is your SPECIAL DAY MYYYY LOVE</span>
+            <h1>Happy 21st Birthday, <span>Myyy Loveeee Bojuuuu</span></h1>
+            <p>To the person who makes my heart flutter, who owns my heart, who makes me special, who makes me happy, safe, comfortable and love.</p>
+            <a href="#gift" class="cta-btn">Open Your Present ✨</a>
+        </div>
+    </section>
+
+  
+
+    <section id="letter" class="letter-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="subtitle">To myyyyy loveeee Bojuuuu</span>
+                <h2>HAPPY 21ST BIRTHDAY BOJU😘😘😘😘</h2>
+            </div>
+
+            <div class="paper-card">
+                <div class="letter-header">
+                    <span>Happiest Birthday Myyyyyy🥳🥳🥳😘😘😘</span>
+                </div>
+                <div class="letter-body">
+                    <p>Myyyy Bojuu,</p>
+                    <p></p>
+                    <p></p>
+                    <p>First of all, HAPPIEST 21ST BIRTHDAY TO YOUUUU MYYYY GWAPOOOO. it's your special day myyyy loveeee. I pray you more birthday to celebrate. Praying you good health, more good oppurtunity, more blessing, more happiness, peace, abundance, positivity and safety. </p>
+                    <p>Myyyy loveeee, thankyouuu very muchhyyyy sa imong endearing love, care sa akoa po🥺🥺. I'm always grateful to have you myyyyy. I'm beyond grateful and I always appreciate all you do towards me po. May God bless you always.</p>
+                    <p>This is just a simple website I make myyyy loveeee, I hope you like it🥺🥺😭😭😭.</p>
+                    <p>I know I may not always be the perfect partner, but I promise to keep loving you with all my heart. I hope you know how much you mean to me and how lucky I feel to have you in my life. You deserve all the happiness, love, and blessings in this world because you have such a beautiful heart💙💙💙💙</p>
+                    <p>On your special day, I pray that all your dreams come true and that life gives you more reasons to smile. No matter what challenges come our way, I hope we continue to choose each other and grow together. I want to be there for you in your happiest moments and hold your hand during your hardest days.</p>
+                    <p>Happy birthday again, myyyyy loveeee Bojuuuuuu💝💝💝💝🥳🥳🥳🥳. I love you more than words can ever explain. You will always have a special place in my heart, and I will always be grateful that our paths crossed. I hope I can make you feel as loved and special as you make me feel every single day. ILOVEYOUUUUUUSOOOOMUCHHHHYYYY MYYYYY LOVEEEEE BOJUUUUU, today and always, forever and ever💋💋💋💋💋💋😘😘😘😘😘😘😘😘😘💝💝💝💝💝💝💝💙💙💙💙💙💙💙</p>
+                    <p>As you celebrate your birthday, I wish for all your sweetest dreams to come true, and I promise to be right beside you, holding your hand through every milestone.💙💙💙💙💙💝💝💝💝💝💝</p>
+                    <p></p>
+
+                </div>
+                <div class="letter-signature">
+                    Your Grasya💙💙💙
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reasons" class="reasons-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="subtitle">Countless Reasons</span>
+                <h2>Why You Mean The World</h2>
+            </div>
+
+            <div class="reasons-grid">
+                <div class="reason-card">
+                    <div class="reason-icon">✨</div>
+                    <h3>Your Kindness</h3>
+                    <p>The gentle way you care for me makes me feel comfortable and safe💙💙💙.</p>
+                </div>
+
+                <div class="reason-card">
+                    <div class="reason-icon">😊</div>
+                    <h3>Your Beautiful Smile</h3>
+                    <p>How your eyes mahimong instik hehe, I really love your smile because it makes my heart flutter hehe. Gwapo kayka mo smile myyyy, tiwasan pas alom nimo hehe😘😘😘😍😍</p>
+                </div>
+
+                <div class="reason-card">
+                    <div class="reason-icon">🏡</div>
+                    <h3>Feeling Like Home</h3>
+                    <p>No matter how chaotic the day gets, being next to you instantly brings me peace. You always makes me felt loved and cherished myyyy even though mosugmat ako pagka moody😭😭😭</p>
+                </div>
+
+                <div class="reason-card">
+                    <div class="reason-icon">🌟</div>
+                    <h3>Your Passion</h3>
+                    <p>The spark in your eyes whenever you speak about the things you love and care for. I admire your commitment, dedication and passionate on the things you like and love myyyy😘😘😘</p>
+                </div>
+
+                <div class="reason-card">
+                    <div class="reason-icon">🎶</div>
+                    <h3>Our Shared Jokes</h3>
+                    <p>All the funny little phrases, secret looks, and laughs that only the two of us understand😁😁😚😚</p>
+                </div>
+
+                <div class="reason-card">
+                    <div class="reason-icon">💖</div>
+                    <h3>Simply Being YOU</h3>
+                    <p>Because you are uniquely, authentically, and endlessly marvelous, majestic and purely beautiful just the way YOU are. I love you for being exactly who you are, and I'm grateful to have you in my life. You make my world a better place, and I cherish every moment we share💙💙💙</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="subtitle">Captured Moments</span>
+                <h2>Our Memory Gallery</h2>
+            </div>
+
+            <div class="gallery-grid">
+                <!-- Polaroid Item 1 -->
+                <div class="polaroid">
+                    <div class="polaroid-img-wrapper">
+                        <img src="1.jpg"alt="Description of image" width="300" height="300">
+                       
+                    </div>
+                    
+                </div>
+
+                <!-- Polaroid Item 2 -->
+                <div class="polaroid">
+                    <div class="polaroid-img-wrapper">
+                        <img src="2.jpg" alt="Description of image" width="300" height="300">
+                    </div>
+                    
+                </div>
+
+                <!-- Polaroid Item 3 -->
+                <div class="polaroid">
+                    <div class="polaroid-img-wrapper">
+                        <img src="3.jpg" alt="Description of image" width="300" height="300">
+                    </div>
+                    
+                </div>
+
+                <!-- Polaroid Item 4 -->
+                <div class="polaroid">
+                    <div class="polaroid-img-wrapper">
+                        <img src="4.jpg" alt="Description of image" width="300" height="300">
+                    </div>
+                    
+                </div>
+
+                <!-- Polaroid Item 5 -->
+                <div class="polaroid">
+                    <div class="polaroid-img-wrapper">
+                        <img src="5.jpg" alt="Description of image" width="300" height="300">
+                    </div>
+                    
+                </div>
+                 <div class="polaroid">
+                    <div class="polaroid-img-wrapper">
+                        <img src="6.jpg" alt="Description of image" width="300" height="300">
+                    </div>
+                    
+                </div>
+                 <div class="polaroid">
+                    <div class="polaroid-img-wrapper">
+                        <img src="7.jpg" alt="Description of image" width="300" height="300">
+                    </div>
+                    
+                </div>
+                 <div class="polaroid">
+                    <div class="polaroid-img-wrapper">
+                        <img src="8.jpg" alt="Description of image" width="300" height="300">
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gift" class="gift-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="subtitle">A Birthday Surprise</span>
+                <h2>Your Special Gift</h2>
+            </div>
+
+            <div class="gift-box-wrapper">
+                <!-- Checkbox state hack for interactive opening -->
+                <input type="checkbox" id="gift-toggle">
+
+                <label for="gift-toggle" class="gift-container">
+                    <div class="gift-box">
+                        <div class="gift-lid">
+                            <div class="gift-bow"></div>
+                        </div>
+                    </div>
+                    <p class="click-hint">🎁 Tap the gift box to open your birthday surprise!</p>
+                </label>
+
+                <div class="surprise-card">
+                    <h3>Happy Birthday, Birthday Star! 🎉</h3>
+                    <p>Your real gift is a day full of love, continuous pampering, and these little lifetime redeemable coupons reserved just for you:</p>
+                    
+                    <div class="coupon-grid">
+                        <div class="coupon">
+                            💋 A Warm Hug & More Kisses
+                            <span>Valid anytime you need relaxation and stress relief</span>
+                        </div>
+                        <div class="coupon">
+                            🍝  Dinner at Your Favorite Eatery
+                            <span>Together we'll enjoy the dinner and it's my treat</span>
+                        </div>
+                        <div class="coupon">
+                            🎂 Birthday Cake
+                            <span>I'll make sure it's the best birthday cake you've ever had!</span>
+                        </div>
+                        <div class="coupon">
+                            🎁 A Surprise Gifts
+                            <span>A simple gift that I made just for you</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Made with endless <span class="footer-heart">❤</span> for the most special person in my life.</p>
+            <p style="font-size: 0.8rem; margin-top: 10px; opacity: 0.7;">Wishing you the happiest birthday today and always.</p>
+        </div>
+    </footer>
+
+</body>
+</html>  
